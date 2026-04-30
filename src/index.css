@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #F5F2ED;
+  --color-ink: #111111;
+  --color-accent: #111111;
+  --color-muted: #555555;
+  --color-line: rgba(0, 0, 0, 0.1);
+  --font-serif: "Spectral", serif;
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Bodoni Moda", serif;
+  --font-accent: "Bodoni Moda", serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-serif antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-ink;
+  }
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.crosshair {
+  @apply absolute w-8 h-8 pointer-events-none;
+}
+
+.cross-tl {
+  @apply top-5 left-5 border-t border-l border-line;
+}
+
+.cross-br {
+  @apply bottom-5 right-5 border-b border-r border-line;
+}

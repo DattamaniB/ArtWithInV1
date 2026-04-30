@@ -1,0 +1,6 @@
+{
+  "name": "ArtWithin",
+  "description": "A high-end creative hiring platform for video editors, designers, and photographers.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": []
+}
